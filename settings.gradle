@@ -15,3 +15,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "demo-widgets"
 include ':app'
+
+include ':lib-base'
