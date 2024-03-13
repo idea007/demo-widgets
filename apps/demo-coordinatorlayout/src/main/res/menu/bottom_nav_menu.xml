@@ -19,15 +19,15 @@
         android:id="@+id/action_page_1"
         android:enabled="true"
         android:icon="@drawable/vector_palette_24dp"
-        android:title="配色库" />
+        android:title="@string/color_library" />
     <item
         android:id="@+id/action_page_2"
         android:enabled="true"
         android:icon="@drawable/vector_picture_24dp"
-        android:title="创作中心" />
+        android:title="@string/creation" />
     <item
         android:id="@+id/action_page_3"
         android:enabled="true"
         android:icon="@drawable/vector_bookmark_24dp"
-        android:title="工具集" />
+        android:title="@string/tools" />
 </menu>

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">demo-widgets</string>
+    <string name="app_name">demo-coordinatorlayout</string>
     <string name="large_text">
         "Material is the metaphor.\n\n"
 
@@ -89,4 +89,11 @@
         "For example, position the FAB to one side of stream of a cards so the FAB won’t interfere "
         "when a user tries to pick up one of cards.\n\n"
     </string>
+
+
+    <string name="color_library">Color Library\n</string>
+    <string name="creation">Creation</string>
+    <string name="tools">Tools</string>
+    <string name="new_create">New create</string>
+
 </resources>

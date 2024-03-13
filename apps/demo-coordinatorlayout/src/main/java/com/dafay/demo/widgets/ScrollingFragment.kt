@@ -1,11 +1,6 @@
 package com.dafay.demo.widgets
 
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import androidx.fragment.app.Fragment
-import androidx.viewbinding.ViewBinding
 import by.kirich1409.viewbindingdelegate.viewBinding
 import com.dafay.demo.lib.base.ui.base.BaseFragment
 import com.dafay.demo.widgets.databinding.FragmentScrollingBinding
@@ -26,7 +21,7 @@ class ScrollingFragment : BaseFragment {
 
     override fun initViews() {
         super.initViews()
-        binding.tvTitle.text="页面："+passTitle
+        binding.tvTitle.text = passTitle
     }
 
     companion object {

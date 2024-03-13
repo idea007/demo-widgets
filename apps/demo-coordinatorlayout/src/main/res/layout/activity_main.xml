@@ -18,8 +18,7 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="#90ff0000"
-            android:backgroundTint="#00ffff"
+            android:background="#50ff0000"
             app:layout_scrollFlags="scroll|snap|enterAlways"
             app:navigationIconTint="?android:attr/colorPrimary"
             app:title="@string/app_name"
@@ -69,7 +68,7 @@
         android:layout_gravity="bottom|end"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="64dp"
-        android:text="新建配色"
+        android:text="@string/new_create"
         app:icon="@drawable/vector_add_24dp" />
 
 

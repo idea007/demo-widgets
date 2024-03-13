@@ -1,10 +1,7 @@
 package com.dafay.demo.widgets
 
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
 import android.view.MenuItem
 import androidx.fragment.app.Fragment
-import androidx.viewbinding.ViewBinding
 import androidx.viewpager2.widget.MarginPageTransformer
 import androidx.viewpager2.widget.ViewPager2
 import by.kirich1409.viewbindingdelegate.viewBinding
@@ -23,9 +20,9 @@ class MainActivity : BaseActivity(R.layout.activity_main) {
 
     private fun initViewPager2() {
         fragments.apply {
-            add(ScrollingFragment.newInstance("配色库"))
-            add(ScrollingFragment.newInstance("创作中心"))
-            add(ScrollingFragment.newInstance("工具集"))
+            add(ScrollingFragment.newInstance(getString(R.string.color_library)))
+            add(ScrollingFragment.newInstance(getString(R.string.creation)))
+            add(ScrollingFragment.newInstance(getString(R.string.tools)))
         }
         binding.vpViewpager2.offscreenPageLimit = 1
         binding.vpViewpager2.setPageTransformer(MarginPageTransformer(5))
