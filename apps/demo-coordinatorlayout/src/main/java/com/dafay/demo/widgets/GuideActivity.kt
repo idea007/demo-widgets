@@ -37,9 +37,14 @@ class GuideActivity : BaseActivity(R.layout.activity_guide) {
      * 退出直到折叠: ExitUntilCollapsedActivity
      */
     private fun addJumpBtns() {
-        addBtn("CoordinatorLayout+Toolbar", {
+        addBtn("CoordinatorLayout+AppBarLayout+Toolbar", {
             startActivity(Intent(this, BasicCoordinatorLayoutActivity::class.java))
         })
+
+        addBtn("CoordinatorLayout+AppBarLayout+CollapsingToolbarLayout+Toolbar", {
+            startActivity(Intent(this, CollapsingToolbarActivity::class.java))
+        })
+
         addBtn("CoordinatorLayout+Toolbar+BottomNavigationView+Fab", {
             startActivity(Intent(this, MainActivity::class.java))
         })

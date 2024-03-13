@@ -18,10 +18,25 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/action_item1"
-        android:title="Item 1"
+        android:title="scroll"
         app:showAsAction="never" />
     <item
         android:id="@+id/action_item2"
-        android:title="Item 2"
+        android:title="scroll | enterAlways"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_item3"
+        android:title="scroll | enterAlways | enterAlwaysCollapsed"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_item4"
+        android:title="scroll | exitUntilCollapsed"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_item5"
+        android:title="scroll | snap"
         app:showAsAction="never" />
 </menu>

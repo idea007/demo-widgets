@@ -4,12 +4,12 @@ import android.view.Menu
 import android.view.MenuItem
 import by.kirich1409.viewbindingdelegate.viewBinding
 import com.dafay.demo.lib.base.ui.base.BaseActivity
-import com.dafay.demo.widgets.databinding.ActivityBasicCoordinatorLayoutBinding
+import com.dafay.demo.widgets.databinding.ActivityCollapsingToolbarBinding
 import com.google.android.material.appbar.AppBarLayout
+import com.google.android.material.appbar.CollapsingToolbarLayout
 
-
-class BasicCoordinatorLayoutActivity : BaseActivity(R.layout.activity_basic_coordinator_layout) {
-    override val binding: ActivityBasicCoordinatorLayoutBinding by viewBinding()
+class CollapsingToolbarActivity : BaseActivity(R.layout.activity_collapsing_toolbar) {
+    override val binding: ActivityCollapsingToolbarBinding by viewBinding()
 
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -58,9 +58,10 @@ class BasicCoordinatorLayoutActivity : BaseActivity(R.layout.activity_basic_coor
      * (AppBarLayout.LayoutParams.SCROLL_FLAG_SCROLL or AppBarLayout.LayoutParams.SCROLL_FLAG_ENTER_ALWAYS)
      */
     private fun setScrollFlags(subtitle: String?, flags: Int) {
-        val layoutParams = binding.toolbar.layoutParams as AppBarLayout.LayoutParams
+        val layoutParams = binding.ctlCollapsing.layoutParams as AppBarLayout.LayoutParams
         layoutParams.scrollFlags = flags
-        binding.toolbar.layoutParams = layoutParams
+        binding.ctlCollapsing.layoutParams = layoutParams
+
         binding.toolbar.subtitle = subtitle
     }
 
