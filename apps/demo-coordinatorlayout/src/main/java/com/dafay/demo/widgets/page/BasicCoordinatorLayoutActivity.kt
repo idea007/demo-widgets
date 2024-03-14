@@ -1,9 +1,10 @@
-package com.dafay.demo.widgets
+package com.dafay.demo.widgets.page
 
 import android.view.Menu
 import android.view.MenuItem
 import by.kirich1409.viewbindingdelegate.viewBinding
 import com.dafay.demo.lib.base.ui.base.BaseActivity
+import com.dafay.demo.widgets.R
 import com.dafay.demo.widgets.databinding.ActivityBasicCoordinatorLayoutBinding
 import com.google.android.material.appbar.AppBarLayout
 
@@ -48,6 +49,13 @@ class BasicCoordinatorLayoutActivity : BaseActivity(R.layout.activity_basic_coor
                 setScrollFlags(
                     item.title.toString(),
                     AppBarLayout.LayoutParams.SCROLL_FLAG_SCROLL or AppBarLayout.LayoutParams.SCROLL_FLAG_SNAP
+                )
+            }
+
+            R.id.action_item6 -> {
+                setScrollFlags(
+                    item.title.toString(),
+                    AppBarLayout.LayoutParams.SCROLL_FLAG_SCROLL or AppBarLayout.LayoutParams.SCROLL_FLAG_ENTER_ALWAYS or AppBarLayout.LayoutParams.SCROLL_FLAG_EXIT_UNTIL_COLLAPSED
                 )
             }
         }

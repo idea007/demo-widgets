@@ -18,7 +18,7 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="#50ff0000"
+            android:background="#30ff0000"
             app:layout_scrollFlags="scroll|snap|enterAlways"
             app:navigationIconTint="?android:attr/colorPrimary"
             app:title="@string/app_name"
@@ -61,7 +61,7 @@
         app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 
 
-    <com.dafay.demo.widgets.ExtendedFAB
+    <com.dafay.demo.widgets.view.ExtendedFAB
         android:id="@+id/fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

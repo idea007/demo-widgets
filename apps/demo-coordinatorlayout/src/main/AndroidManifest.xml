@@ -13,16 +13,16 @@
         android:theme="@style/Theme.Demowidgets"
         tools:targetApi="31">
         <activity
-            android:name=".CollapsingToolbarActivity"
+            android:name=".page.CollapsingToolbarActivity"
             android:exported="false" />
         <activity
-            android:name=".BasicCoordinatorLayoutActivity"
+            android:name=".page.BasicCoordinatorLayoutActivity"
             android:exported="false" />
         <activity
             android:name=".TestOneActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".page.bottomnav.BottomNavigationBehaviorActivity"
             android:exported="false" />
         <activity
             android:name=".GuideActivity"

@@ -1,16 +1,18 @@
 package com.dafay.demo.widgets
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
+import android.graphics.Color
 import android.view.ViewGroup
 import androidx.core.view.setMargins
-import androidx.viewbinding.ViewBinding
+import androidx.core.view.setPadding
 import by.kirich1409.viewbindingdelegate.viewBinding
 import com.dafay.demo.lib.base.ui.base.BaseActivity
 import com.dafay.demo.lib.base.utils.dp2px
 import com.dafay.demo.widgets.databinding.ActivityGuideBinding
-import com.google.android.material.button.MaterialButton
+import com.dafay.demo.widgets.page.BasicCoordinatorLayoutActivity
+import com.dafay.demo.widgets.page.bottomnav.BottomNavigationBehaviorActivity
+import com.dafay.demo.widgets.page.CollapsingToolbarActivity
+import com.google.android.material.textview.MaterialTextView
 
 class GuideActivity : BaseActivity(R.layout.activity_guide) {
     override val binding: ActivityGuideBinding by viewBinding()
@@ -46,17 +48,19 @@ class GuideActivity : BaseActivity(R.layout.activity_guide) {
         })
 
         addBtn("CoordinatorLayout+Toolbar+BottomNavigationView+Fab", {
-            startActivity(Intent(this, MainActivity::class.java))
+            startActivity(Intent(this, BottomNavigationBehaviorActivity::class.java))
         })
     }
 
     private fun addBtn(text: String, func: () -> Unit) {
-        val button = MaterialButton(this)
+        val textview = MaterialTextView(this)
         val marginLayoutParams = ViewGroup.MarginLayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT)
         marginLayoutParams.setMargins(8.dp2px)
-        binding.llContainer.addView(button, marginLayoutParams)
-        button.setText(text)
-        button.setOnClickListener {
+        textview.setPadding(8.dp2px)
+        binding.llContainer.addView(textview, marginLayoutParams)
+        textview.setBackgroundColor(Color.CYAN)
+        textview.setText(text)
+        textview.setOnClickListener {
             func.invoke()
         }
     }

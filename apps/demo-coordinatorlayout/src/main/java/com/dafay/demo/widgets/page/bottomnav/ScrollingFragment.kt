@@ -1,8 +1,9 @@
-package com.dafay.demo.widgets
+package com.dafay.demo.widgets.page.bottomnav
 
 import android.os.Bundle
 import by.kirich1409.viewbindingdelegate.viewBinding
 import com.dafay.demo.lib.base.ui.base.BaseFragment
+import com.dafay.demo.widgets.R
 import com.dafay.demo.widgets.databinding.FragmentScrollingBinding
 
 class ScrollingFragment : BaseFragment {

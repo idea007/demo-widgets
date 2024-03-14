@@ -8,4 +8,9 @@
     android:orientation="vertical"
     tools:context=".GuideActivity">
 
+    <com.google.android.material.textview.MaterialTextView
+        android:background="?attr/colorSurfaceDim"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
 </LinearLayout>

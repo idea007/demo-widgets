@@ -35,8 +35,15 @@
         android:title="scroll | exitUntilCollapsed"
         app:showAsAction="never" />
 
+
+
     <item
         android:id="@+id/action_item5"
         android:title="scroll | snap"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_item6"
+        android:title="scroll | exitUntilCollapsed | enterAlways"
         app:showAsAction="never" />
 </menu>

@@ -1,4 +1,4 @@
-package com.dafay.demo.widgets
+package com.dafay.demo.widgets.page.bottomnav
 
 import android.view.MenuItem
 import androidx.fragment.app.Fragment
@@ -6,11 +6,12 @@ import androidx.viewpager2.widget.MarginPageTransformer
 import androidx.viewpager2.widget.ViewPager2
 import by.kirich1409.viewbindingdelegate.viewBinding
 import com.dafay.demo.lib.base.ui.base.BaseActivity
-import com.dafay.demo.widgets.databinding.ActivityMainBinding
+import com.dafay.demo.widgets.R
+import com.dafay.demo.widgets.databinding.ActivityBottomNavigationBehaviorBinding
 import com.google.android.material.navigation.NavigationBarView
 
-class MainActivity : BaseActivity(R.layout.activity_main) {
-    override val binding: ActivityMainBinding by viewBinding()
+class BottomNavigationBehaviorActivity : BaseActivity(R.layout.activity_bottom_navigation_behavior) {
+    override val binding: ActivityBottomNavigationBehaviorBinding by viewBinding()
 
     private val fragments = ArrayList<Fragment>()
 
@@ -27,7 +28,7 @@ class MainActivity : BaseActivity(R.layout.activity_main) {
         binding.vpViewpager2.offscreenPageLimit = 1
         binding.vpViewpager2.setPageTransformer(MarginPageTransformer(5))
         binding.vpViewpager2.adapter = TestPageAdapter(this, fragments)
-        binding.vpViewpager2.isUserInputEnabled = false
+//        binding.vpViewpager2.isUserInputEnabled = false
 
         binding.bnvNavigation.setOnItemSelectedListener(object : NavigationBarView.OnItemSelectedListener {
             override fun onNavigationItemSelected(item: MenuItem): Boolean {

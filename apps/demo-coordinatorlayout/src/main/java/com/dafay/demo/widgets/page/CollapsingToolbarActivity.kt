@@ -1,12 +1,12 @@
-package com.dafay.demo.widgets
+package com.dafay.demo.widgets.page
 
 import android.view.Menu
 import android.view.MenuItem
 import by.kirich1409.viewbindingdelegate.viewBinding
 import com.dafay.demo.lib.base.ui.base.BaseActivity
+import com.dafay.demo.widgets.R
 import com.dafay.demo.widgets.databinding.ActivityCollapsingToolbarBinding
 import com.google.android.material.appbar.AppBarLayout
-import com.google.android.material.appbar.CollapsingToolbarLayout
 
 class CollapsingToolbarActivity : BaseActivity(R.layout.activity_collapsing_toolbar) {
     override val binding: ActivityCollapsingToolbarBinding by viewBinding()
@@ -50,6 +50,10 @@ class CollapsingToolbarActivity : BaseActivity(R.layout.activity_collapsing_tool
                     AppBarLayout.LayoutParams.SCROLL_FLAG_SCROLL or AppBarLayout.LayoutParams.SCROLL_FLAG_SNAP
                 )
             }
+
+            android.R.id.home-> {
+                onBackPressedDispatcher.onBackPressed()
+            }
         }
         return super.onOptionsItemSelected(item)
     }
@@ -58,9 +62,9 @@ class CollapsingToolbarActivity : BaseActivity(R.layout.activity_collapsing_tool
      * (AppBarLayout.LayoutParams.SCROLL_FLAG_SCROLL or AppBarLayout.LayoutParams.SCROLL_FLAG_ENTER_ALWAYS)
      */
     private fun setScrollFlags(subtitle: String?, flags: Int) {
-        val layoutParams = binding.ctlCollapsing.layoutParams as AppBarLayout.LayoutParams
+        val layoutParams = binding.collapsingToolbar.layoutParams as AppBarLayout.LayoutParams
         layoutParams.scrollFlags = flags
-        binding.ctlCollapsing.layoutParams = layoutParams
+        binding.collapsingToolbar.layoutParams = layoutParams
 
         binding.toolbar.subtitle = subtitle
     }
@@ -68,7 +72,10 @@ class CollapsingToolbarActivity : BaseActivity(R.layout.activity_collapsing_tool
     override fun initViews() {
         super.initViews()
         setSupportActionBar(binding.toolbar)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true) //添加默认的返回图标
+        supportActionBar?.setHomeButtonEnabled(true) //设置返回键可用
         setScrollFlags("scroll", AppBarLayout.LayoutParams.SCROLL_FLAG_SCROLL)
+        binding.collapsingToolbar.setTitle("CollapsingToolbar");
     }
 
 }

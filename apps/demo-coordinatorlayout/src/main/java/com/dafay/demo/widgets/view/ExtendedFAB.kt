@@ -1,4 +1,4 @@
-package com.dafay.demo.widgets
+package com.dafay.demo.widgets.view
 
 import android.animation.Animator
 import android.animation.AnimatorListenerAdapter
@@ -11,7 +11,8 @@ import android.view.ViewGroup
 import android.view.ViewPropertyAnimator
 import androidx.coordinatorlayout.widget.CoordinatorLayout
 import androidx.core.view.ViewCompat
-import com.google.android.material.R
+import com.dafay.demo.lib.base.utils.dp2px
+import com.dafay.demo.widgets.R
 import com.google.android.material.animation.AnimationUtils.FAST_OUT_LINEAR_IN_INTERPOLATOR
 import com.google.android.material.animation.AnimationUtils.LINEAR_OUT_SLOW_IN_INTERPOLATOR
 import com.google.android.material.behavior.HideBottomViewOnScrollBehavior
@@ -42,15 +43,15 @@ open class ExtendedFAB @JvmOverloads constructor(
 
         private val DEFAULT_ENTER_ANIMATION_DURATION_MS = 225
         private val DEFAULT_EXIT_ANIMATION_DURATION_MS = 175
-        private val ENTER_ANIM_DURATION_ATTR: Int = R.attr.motionDurationLong2
-        private val EXIT_ANIM_DURATION_ATTR: Int = R.attr.motionDurationMedium4
-        private val ENTER_EXIT_ANIM_EASING_ATTR: Int = R.attr.motionEasingEmphasizedInterpolator
+        private val ENTER_ANIM_DURATION_ATTR: Int = com.google.android.material.R.attr.motionDurationLong2
+        private val EXIT_ANIM_DURATION_ATTR: Int = com.google.android.material.R.attr.motionDurationMedium4
+        private val ENTER_EXIT_ANIM_EASING_ATTR: Int = com.google.android.material.R.attr.motionEasingEmphasizedInterpolator
 
         @SuppressLint("RestrictedApi")
         override fun onLayoutChild(parent: CoordinatorLayout, child: ExtendedFloatingActionButton, layoutDirection: Int): Boolean {
             val paramsCompat = child.layoutParams as ViewGroup.MarginLayoutParams
-            height = child.measuredHeight + paramsCompat.bottomMargin
-            height = child.measuredHeight
+//            height = child.measuredHeight + paramsCompat.bottomMargin
+            height = 48.dp2px
             enterAnimDuration = MotionUtils.resolveThemeDuration(
                 child.context,
                 ENTER_ANIM_DURATION_ATTR,
