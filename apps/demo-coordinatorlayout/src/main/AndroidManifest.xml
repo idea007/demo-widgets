@@ -13,6 +13,9 @@
         android:theme="@style/Theme.Demowidgets"
         tools:targetApi="31">
         <activity
+            android:name=".page.DrawerLayoutActivity"
+            android:exported="false" />
+        <activity
             android:name=".page.TabLayoutActivity"
             android:exported="false" />
         <activity
@@ -20,9 +23,6 @@
             android:exported="false" />
         <activity
             android:name=".page.BasicCoordinatorLayoutActivity"
-            android:exported="false" />
-        <activity
-            android:name=".TestOneActivity"
             android:exported="false" />
         <activity
             android:name=".page.bottomnav.BottomNavigationBehaviorActivity"

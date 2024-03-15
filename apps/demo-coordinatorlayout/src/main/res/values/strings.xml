@@ -96,4 +96,8 @@
     <string name="tools">Tools</string>
     <string name="new_create">New create</string>
 
+
+    <string name="navigation_drawer_open">Open drawer</string>
+    <string name="navigation_drawer_close">Close drawer</string>
+
 </resources>
