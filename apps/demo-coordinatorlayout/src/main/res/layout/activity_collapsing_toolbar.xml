@@ -27,6 +27,16 @@
                 app:layout_collapseMode="parallax"
                 app:layout_collapseParallaxMultiplier="0.7" />
 
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_mode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="56dp"
+                android:paddingHorizontal="16dp"
+                android:textColor="@color/white"
+                android:textAppearance="?attr/textAppearanceTitleMedium" />
+
             <com.google.android.material.appbar.MaterialToolbar
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"

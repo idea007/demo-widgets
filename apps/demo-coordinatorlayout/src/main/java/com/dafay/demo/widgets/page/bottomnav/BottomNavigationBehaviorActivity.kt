@@ -8,6 +8,7 @@ import by.kirich1409.viewbindingdelegate.viewBinding
 import com.dafay.demo.lib.base.ui.base.BaseActivity
 import com.dafay.demo.widgets.R
 import com.dafay.demo.widgets.databinding.ActivityBottomNavigationBehaviorBinding
+import com.dafay.demo.widgets.page.adapter.TestPageAdapter
 import com.google.android.material.navigation.NavigationBarView
 
 class BottomNavigationBehaviorActivity : BaseActivity(R.layout.activity_bottom_navigation_behavior) {

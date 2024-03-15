@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+
+    <style name="TabLayoutStyle" parent="Base.Widget.Design.TabLayout" tools:ignore="ResourceName">
+        <item name="android:textSize">26sp</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+</resources>

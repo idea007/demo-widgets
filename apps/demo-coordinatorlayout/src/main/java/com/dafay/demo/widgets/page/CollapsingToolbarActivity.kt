@@ -51,7 +51,7 @@ class CollapsingToolbarActivity : BaseActivity(R.layout.activity_collapsing_tool
                 )
             }
 
-            android.R.id.home-> {
+            android.R.id.home -> {
                 onBackPressedDispatcher.onBackPressed()
             }
         }
@@ -65,8 +65,7 @@ class CollapsingToolbarActivity : BaseActivity(R.layout.activity_collapsing_tool
         val layoutParams = binding.collapsingToolbar.layoutParams as AppBarLayout.LayoutParams
         layoutParams.scrollFlags = flags
         binding.collapsingToolbar.layoutParams = layoutParams
-
-        binding.toolbar.subtitle = subtitle
+        binding.tvMode.text = subtitle
     }
 
     override fun initViews() {

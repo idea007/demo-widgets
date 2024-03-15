@@ -12,6 +12,7 @@ import com.dafay.demo.widgets.databinding.ActivityGuideBinding
 import com.dafay.demo.widgets.page.BasicCoordinatorLayoutActivity
 import com.dafay.demo.widgets.page.bottomnav.BottomNavigationBehaviorActivity
 import com.dafay.demo.widgets.page.CollapsingToolbarActivity
+import com.dafay.demo.widgets.page.TabLayoutActivity
 import com.google.android.material.textview.MaterialTextView
 
 class GuideActivity : BaseActivity(R.layout.activity_guide) {
@@ -49,6 +50,10 @@ class GuideActivity : BaseActivity(R.layout.activity_guide) {
 
         addBtn("CoordinatorLayout+Toolbar+BottomNavigationView+Fab", {
             startActivity(Intent(this, BottomNavigationBehaviorActivity::class.java))
+        })
+
+        addBtn("TabLayout+ViewPager2", {
+            startActivity(Intent(this, TabLayoutActivity::class.java))
         })
     }
 

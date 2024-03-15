@@ -1,4 +1,4 @@
-package com.dafay.demo.widgets.page.bottomnav
+package com.dafay.demo.widgets.page.adapter
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity

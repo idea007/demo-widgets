@@ -1,6 +1,7 @@
 package com.dafay.demo.widgets
 
 import org.junit.Test
+import com.dafay.demo.lib.base.utils.println
 
 import org.junit.Assert.*
 
@@ -13,5 +14,17 @@ class ExampleUnitTest {
     @Test
     fun addition_isCorrect() {
         assertEquals(4, 2 + 2)
+    }
+
+    @Test
+    fun test_runCatching(){
+        kotlin.runCatching {
+            var b=0
+            var c=100/b
+        }.let {
+            if(it.isFailure){
+                println("it ${it}")
+            }
+        }
     }
 }
