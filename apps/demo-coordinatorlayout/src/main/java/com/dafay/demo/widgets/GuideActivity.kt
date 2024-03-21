@@ -24,6 +24,7 @@ class GuideActivity : BaseActivity(R.layout.activity_guide) {
     }
 
     /**
+     * 推荐命名
      * 基本使用: BasicCoordinatorLayoutActivity
      * 滚动行为: ScrollingBehaviorActivity
      * 折叠工具栏: CollapsingToolbarActivity

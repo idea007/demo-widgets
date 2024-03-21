@@ -35,11 +35,13 @@ open class ExtendedFAB @JvmOverloads constructor(
         return fabBehavior
     }
 
+    /**
+     * 自定义 Behavior
+     */
     protected class ExtendedFABBehavior(
         context: Context,
         attributeSet: AttributeSet?
     ) : ExtendedFloatingActionButtonBehavior<ExtendedFloatingActionButton>(context, attributeSet) {
-
 
         private val DEFAULT_ENTER_ANIMATION_DURATION_MS = 225
         private val DEFAULT_EXIT_ANIMATION_DURATION_MS = 175
@@ -47,11 +49,15 @@ open class ExtendedFAB @JvmOverloads constructor(
         private val EXIT_ANIM_DURATION_ATTR: Int = com.google.android.material.R.attr.motionDurationMedium4
         private val ENTER_EXIT_ANIM_EASING_ATTR: Int = com.google.android.material.R.attr.motionEasingEmphasizedInterpolator
 
+        /**
+         * 因为实现了 Behavior 接口，CoordinatorLayout 始终会调用该视图的 onLayoutChild。
+         * 在这里自定义或修改布局，以代替默认的子布局行为。
+         */
         @SuppressLint("RestrictedApi")
         override fun onLayoutChild(parent: CoordinatorLayout, child: ExtendedFloatingActionButton, layoutDirection: Int): Boolean {
             val paramsCompat = child.layoutParams as ViewGroup.MarginLayoutParams
-//            height = child.measuredHeight + paramsCompat.bottomMargin
-            height = 48.dp2px
+            // height = child.measuredHeight + paramsCompat.bottomMargin
+            height = 48.dp2px // 演示用
             enterAnimDuration = MotionUtils.resolveThemeDuration(
                 child.context,
                 ENTER_ANIM_DURATION_ATTR,
@@ -75,6 +81,23 @@ open class ExtendedFAB @JvmOverloads constructor(
             return super.onLayoutChild(parent, child, layoutDirection)
         }
 
+        /**
+         * 当依赖的视图发生变化时调用，可以在这里处理子视图的位置或大小变化。
+         */
+        override fun onDependentViewChanged(parent: CoordinatorLayout, child: ExtendedFloatingActionButton, dependency: View): Boolean {
+            return super.onDependentViewChanged(parent, child, dependency)
+        }
+
+        /**
+         * 用于确定一个视图是否依赖于另一个视图，返回true表示依赖，false表示不依赖。
+         */
+        override fun layoutDependsOn(parent: CoordinatorLayout, child: ExtendedFloatingActionButton, dependency: View): Boolean {
+            return super.layoutDependsOn(parent, child, dependency)
+        }
+
+        /**
+         * 用于处理滚动事件，可以在这里响应滚动事件并调整子视图的位置或大小。
+         */
         override fun onStartNestedScroll(
             coordinatorLayout: CoordinatorLayout,
             child: ExtendedFloatingActionButton,
@@ -86,6 +109,9 @@ open class ExtendedFAB @JvmOverloads constructor(
             return axes == ViewCompat.SCROLL_AXIS_VERTICAL
         }
 
+        /**
+         * 用于处理滚动事件，可以在这里响应滚动事件并调整子视图的位置或大小。
+         */
         override fun onNestedScroll(
             coordinatorLayout: CoordinatorLayout,
             child: ExtendedFloatingActionButton,
@@ -138,7 +164,6 @@ open class ExtendedFAB @JvmOverloads constructor(
         /**
          * Slides the child with or without animation from its current position to be totally off the
          * screen.
-         *
          * @param animate `true` to slide with animation.
          */
         fun slideDown(child: View, animate: Boolean) {
@@ -212,6 +237,5 @@ open class ExtendedFAB @JvmOverloads constructor(
                 child.setTranslationY(targetTranslationY.toFloat())
             }
         }
-
     }
 }
