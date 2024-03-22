@@ -34,8 +34,8 @@
                 android:layout_gravity="bottom"
                 android:layout_marginBottom="56dp"
                 android:paddingHorizontal="16dp"
-                android:textColor="@color/white"
-                android:textAppearance="?attr/textAppearanceTitleMedium" />
+                android:textAppearance="?attr/textAppearanceTitleMedium"
+                android:textColor="@color/white" />
 
             <com.google.android.material.appbar.MaterialToolbar
                 android:id="@+id/toolbar"
@@ -58,7 +58,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/text_margin"
-            android:text="@string/large_text" />
+            android:text="@string/large_text"
+            android:textSize="26dp" />
 
     </androidx.core.widget.NestedScrollView>
 
